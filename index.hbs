@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Kenyan Counties API</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <meta content="Kenyan Counties API" property="og:title">
+    <meta content="Get list of counties from kenya and their information via RESTful API" name="description">
+    <meta name="keywords" content="rest,api,counties,countie,kenya,json">
+    <meta name="author" content="Yusuf Hamisi">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/components/prism-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  </head>
+
+  <body>
+    <header style="border-bottom: 1px solid #aaa;">
+      <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <div class="uk-navbar-item">
+            <span class="uk-text-bold uk-text-large">Counties API</span>
+          </div>
+        </div>
+
+        <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav">
+            <li>
+              <a href="https://github.com/yusuf-khamis/counties" target="_blank" rel="noreferer,noopener">
+                <span uk-icon="github"></span>
+                <span class="uk-text-capitalize uk-margin-small-left">Github</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="uk-flex uk-flex-center">
+      <div class="uk-width-3-4@l uk-width-5-6@s  uk-padding uk-background-muted">
+        <p class="uk-text-large">Counties API</h1>
+        <p>Get list of Kenyan counties and their information</p>
+        <p>Current version: {{ version }}</p>
+
+        <hr class="uk-margin-medium">
+
+        <p class="uk-text-large">API Endpoints</p>
+        <p>Below are described the REST endpoints available that you can use to search for counties</p>
+
+        <hr class="uk-margin-medium">
+
+        <p class="uk-text-large">All</p>
+        <pre><code class="language-uri">https://counties.heroku.com/api/v1</code></pre>
+
+        <hr class="uk-margin-medium">
+
+        <p class="uk-text-large">Name</p>
+        <p>Search by county name</p>
+        <pre><code class="language-uri">https://counties.heroku.com/api/v1/name/{name}
+https://counties.heroku.com/api/v1/name/nairobi
+
+// The name of the county should be in lowercase, and if two words are involved, separate using hyphen
+https://counties.heroku.com/api/v1/name/homa-bay</code></pre>
+
+        <hr class="uk-margin-medium">
+
+        <p class="uk-text-large">Capital</p>
+        <p>Search by county capital</p>
+        <pre><code class="language-uri">https://counties.heroku.com/api/v1/capital/{name}
+https://counties.heroku.com/api/v1/capital/bomet
+
+// The name of the capital of the county should be in lowercase, and if two words are involved, separate using hyphen
+https://counties.heroku.com/api/v1/capital/ol-kalou</code></pre>
+
+        <hr class="uk-margin-medium">
+
+        <p class="uk-text-large">Code</p>
+        <p>Search by county code</p>
+        <pre><code class="language-uri">https://counties.heroku.com/api/v1/code/{code}
+https://counties.heroku.com/api/v1/code/23</code></pre>
+
+        <hr class="uk-margin-medium">
+        
+        <p class="uk-text-large">Response Example</p>
+        <pre><code class="language-json">[
+  {
+    "name": "Nandi",
+    "code": "29",
+    "areaSqKm": "2884.5", // area in square kilometres
+    "capital": [
+      "Kapsabet"
+    ]
+  }
+]</code></pre>
+
+        <hr class="uk-margin-medium">
+
+        <p class="uk-text-large">Filter Response</p>
+        <p>You can filter the output of your request to include only the specified fields</p>
+        <pre><code class="language-uri">https://counties.heroku.com/api/v1?fields={...fields}
+https://counties.heroku.com/api/v1?fields=name,code</code></pre>
+
+        <hr class="uk-margin-medium">
+
+        <p class="uk-text-large">Source</p>
+        <p>
+          <a href="https://en.wikipedia.org/wiki/Counties_of_Kenya" class="uk-link" target="_blank" rel="noreferer,noopener">Wikipedia</a>
+        </p>
+
+        <hr class="uk-margin-medium">
+
+        <p class="uk-text-large">License</p>
+        <p>
+          <a href="https://www.mozilla.org/en-US/MPL/2.0/" class="uk-link" target="_blank" rel="noreferer,noopener">Mozilla Public License (MPL 2.0)</a>
+        </p>
+        <p class="uk-text-muted">Made with ♥ by Yusuf Hamisi (yusufkhamis27@gmail.com)</p>
+      </div>
+    </section>
+  </body>
+</html>
