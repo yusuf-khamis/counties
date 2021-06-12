@@ -35,7 +35,7 @@ server.get('/favicon.png', function (request, reply) {
 server.get('/api/v1', api.v1)
 server.get('/api/v1/:filter/:value', api.v1)
 
-server.listen(3000, function (err, address) {
+server.listen(process.env.PORT || 3000, function (err, address) {
   if (err) {
     console.log(err)
   }
