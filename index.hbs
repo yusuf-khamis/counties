@@ -90,6 +90,24 @@ https://counties-kenya.herokuapp.com/api/v1/code/23</code></pre>
 
         <hr class="uk-margin-medium">
         
+        <p class="uk-text-large">Sort</p>
+        <p>
+          Sort response by either
+          <span class="uk-text-italic uk-text-bold">name</span>,
+          <span class="uk-text-italic uk-text-bold">code</span> or
+          <span class="uk-text-italic uk-text-bold">areaSqKm</span>
+          both directions
+        </p>
+        <pre><code class="language-uri">https://counties-kenya.herokuapp.com/api/v1?order={field}
+https://counties-kenya.herokuapp.com/api/v1?order=name
+https://counties-kenya.herokuapp.com/api/v1?order=code
+https://counties-kenya.herokuapp.com/api/v1?order=areaSqKm
+
+// Response is sorted in ascending order by default, to sort in descending order add 'dir=desc'
+https://counties-kenya.herokuapp.com/api/v1?order=name&amp;dir=desc</code></pre>
+        
+        <hr class="uk-margin-medium">
+        
         <p class="uk-text-large">Response Example</p>
         <pre><code class="language-json">[
   {

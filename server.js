@@ -21,6 +21,7 @@ server.register(require('fastify-static'), {
   root: join(__dirname, 'public')
 })
 server.register(require('fastify-sensible'))
+server.register(require('fastify-cors'))
 
 server.get('/', function (request, reply) {
   reply.view('index.hbs', {

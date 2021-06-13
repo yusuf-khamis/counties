@@ -1,6 +1,6 @@
 {
   "name": "counties",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "API to fetch all counties of Kenya",
   "scripts": {
     "start": "node server.js",
@@ -21,6 +21,7 @@
   "license": "MPL 2.0",
   "dependencies": {
     "fastify": "^3.17.0",
+    "fastify-cors": "^6.0.1",
     "fastify-helmet": "^5.3.1",
     "fastify-sensible": "^3.1.1",
     "fastify-static": "^4.2.2",
