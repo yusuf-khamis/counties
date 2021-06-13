@@ -45,13 +45,13 @@ module.exports = {
 
     if (list.length && typeof request.query.order === 'string') {
       if (/^(name|code|areaSqKm)$/.test(request.query.order) && list[0][request.query.order]) {
-        let dir = 1;
+        let dir = 1
 
         if (request.query.dir === 'desc') {
-          dir = -1;
+          dir = -1
         }
 
-        switch(request.query.order) {
+        switch (request.query.order) {
           case 'name': {
             list.sort((a, b) => dir * a.name.localeCompare(b.name))
             break

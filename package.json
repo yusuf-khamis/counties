@@ -1,6 +1,6 @@
 {
   "name": "counties",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API to fetch all counties of Kenya",
   "scripts": {
     "start": "node server.js",
